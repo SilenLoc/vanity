@@ -1,12 +1,12 @@
-# easyreading
+# Vanity
 ___
 
-This repository should be the starting point for a way of incorperating ideas into a application.
+This repository should be the starting point for a way of incorperating any idea into a application.
 ___
 ## ways to contribute
 
 ### Ideas
-The [discussions page](https://github.com/SilenLoc/easyreading/discussions) can be used to give new ideas, maybe new ways to help NDs read better.
+The [discussions page](https://github.com/SilenLoc/easyreading/discussions) can be used to give new ideas.
 
 If you have ideas related to the code or repository, you may consider creating an issue.
 ___
