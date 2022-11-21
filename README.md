@@ -1,7 +1,7 @@
 # easyreading
 ___
 
-This repository should be the starting point for a way of making digital text more accessible to humans with neurodivergent conditons, NDs.
+This repository should be the starting point for a way of incorperating ideas into a application.
 ___
 ## ways to contribute
 
