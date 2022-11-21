@@ -1,14 +1,15 @@
 {
-  "$schema" : "https://docs.renovatebot.com/renovate-schema.json",
-  "extends" : [
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
     "config:base",
     ":semanticCommitTypeAll(chore)"
   ],
-  "rebaseWhen" : "conflicted",
-  "labels" : [
-    "dependencies",
+  "rebaseWhen": "conflicted",
+  "labels": [
+    "dependencies"
   ],
-  "prConcurrentLimit" : 3,
-  "lockFileMaintenance" : {
-    "enabled" : true
+  "prConcurrentLimit": 3,
+  "lockFileMaintenance": {
+    "enabled": true
   }
+}
