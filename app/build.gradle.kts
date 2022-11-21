@@ -6,7 +6,7 @@
 
 plugins {
   id("kotlin")
-  id("org.openjfx.javafxplugin") version "0.0.9"
+  id("org.openjfx.javafxplugin") version "0.0.13"
   id("easyreading.kotlin-application-conventions")
 }
 
