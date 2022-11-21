@@ -11,5 +11,6 @@
   "prConcurrentLimit": 3,
   "lockFileMaintenance": {
     "enabled": true
-  }
+  },
+  "commitMessagePrefix": "chore(deps): "
 }
