@@ -6,7 +6,7 @@ ___
 ## ways to contribute
 
 ### Ideas
-The [discussions page](https://github.com/SilenLoc/easyreading/discussions) can be used to give new ideas.
+The [discussions page](https://github.com/SilenLoc/easyreading/discussions) can be used for new ideas in general.
 
 If you have ideas related to the code or repository, you may consider creating an issue.
 ___
