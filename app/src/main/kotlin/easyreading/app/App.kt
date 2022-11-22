@@ -3,6 +3,9 @@
  */
 package easyreading.app
 
+import easyreading.app.init.Init
+import easyreading.app.init.inject.Koin
+import easyreading.app.init.inject.getService
 import javafx.application.Application
 import javafx.scene.Group
 import javafx.scene.Scene
@@ -13,11 +16,13 @@ import kotlinx.coroutines.javafx.JavaFx
 import kotlinx.coroutines.withContext
 
 suspend fun main() = withContext(Dispatchers.JavaFx) {
-    Init()
+    Koin().start()
+    Init(getService())
+
+
 
     val fxApp = BionicReader()
     fxApp.start(Stage())
-
 
 
 }
