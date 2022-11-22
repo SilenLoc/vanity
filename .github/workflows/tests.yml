@@ -1,10 +1,13 @@
 name: tests
 
-on:  
+on:
   push:
-  pull_request:
     branches:
       - main
+
+  pull_request:
+    branches:
+      - '**'
 
 jobs:
   build:
