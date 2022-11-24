@@ -1,14 +1,14 @@
 # Vanity
 ___
 
-This repository should be the starting point for a way of incorperating any idea into a application.
+This repository should be the starting point for a way of incorperating any idea into an application.
 ___
 ## ways to contribute
 
 ### Ideas
 The [discussions page](https://github.com/SilenLoc/easyreading/discussions) can be used for new ideas in general.
 
-If you have ideas related to the code or repository, you may consider creating an issue.
+If you have ideas related to the code or the repository, you may consider creating an issue.
 ___
 ### Code
 
@@ -22,6 +22,8 @@ ___
 # Projects
 
 ## bionic reading
+
+## elvish / elbish translator
 
 
 
