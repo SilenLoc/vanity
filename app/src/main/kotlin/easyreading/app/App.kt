@@ -18,11 +18,11 @@ import kotlinx.coroutines.withContext
 
 suspend fun main() = withContext(Dispatchers.JavaFx) {
     Koin().start()
-    Init(getService(), { message -> showError(message) }) { startApps() }
+    Init(getService(), { message -> showError(message) }) { startApp() }
     Unit
 }
 
-private fun startApps() {
+private fun startApp() {
     val fxApp = BionicReader()
     fxApp.start(Stage())
 }
