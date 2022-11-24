@@ -18,21 +18,21 @@ import kotlinx.coroutines.withContext
 
 suspend fun main() = withContext(Dispatchers.JavaFx) {
     Koin().start()
-    Init(getService(), { message -> showError(message) }) { startApp() }
+    Init(getService(), { message -> showError(message) }) { startPlatform() }
     Unit
 }
 
-private fun startApp() {
-    val fxApp = BionicReader()
+private fun startPlatform() {
+    val fxApp = PlatformApp()
     fxApp.start(Stage())
 }
 
-class BionicReader : Application() {
+class PlatformApp : Application() {
     override fun start(stage: Stage) {
         val circ = Circle(40.0, 40.0, 30.0)
         val root = Group(circ)
         val scene = Scene(root, 400.0, 300.0)
-        stage.title = "My JavaFX Application"
+        stage.title = "Vanity Platform"
         stage.scene = scene
         stage.show()
     }
