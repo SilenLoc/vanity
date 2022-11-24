@@ -17,9 +17,13 @@ javafx {
 }
 
 dependencies {
+  api(project(":utilities"))
+
   implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
   implementation("org.jetbrains.kotlinx:kotlinx-coroutines-javafx:1.6.4")
-  api(project(":utilities"))
+
+  val koinVersion = "3.2.2"
+  implementation("io.insert-koin:koin-core:$koinVersion")
 
 }
 

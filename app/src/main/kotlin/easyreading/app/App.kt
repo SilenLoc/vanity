@@ -3,6 +3,10 @@
  */
 package easyreading.app
 
+import easyreading.app.failurewindows.showError
+import easyreading.app.init.Init
+import easyreading.app.init.inject.Koin
+import easyreading.app.init.inject.getService
 import javafx.application.Application
 import javafx.scene.Group
 import javafx.scene.Scene
@@ -13,13 +17,14 @@ import kotlinx.coroutines.javafx.JavaFx
 import kotlinx.coroutines.withContext
 
 suspend fun main() = withContext(Dispatchers.JavaFx) {
-    Init()
+    Koin().start()
+    Init(getService(), { message -> showError(message) }) { startApp() }
+    Unit
+}
 
+private fun startApp() {
     val fxApp = BionicReader()
     fxApp.start(Stage())
-
-
-
 }
 
 class BionicReader : Application() {
@@ -27,8 +32,8 @@ class BionicReader : Application() {
         val circ = Circle(40.0, 40.0, 30.0)
         val root = Group(circ)
         val scene = Scene(root, 400.0, 300.0)
-        stage.setTitle("My JavaFX Application")
-        stage.setScene(scene)
+        stage.title = "My JavaFX Application"
+        stage.scene = scene
         stage.show()
     }
 }
