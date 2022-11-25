@@ -1,9 +1,9 @@
-package easyreading.app.init
+package vanity.app.init
 
-import easyreading.app.init.services.IFilePathValidationService
-import easyreading.app.results.onUnfit
-import easyreading.app.results.onWell
-import easyreading.utilities.Log
+import vanity.app.init.services.IFilePathValidationService
+import vanity.app.results.onUnfit
+import vanity.app.results.onWell
+import vanity.utilities.Log
 
 class Init(
     private val filePathValidationService: IFilePathValidationService,

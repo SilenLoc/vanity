@@ -5,7 +5,7 @@
  */
 
 plugins {
-  id("easyreading.kotlin-library-conventions")
+  id("vanity.kotlin-library-conventions")
 }
 
 dependencies {

@@ -1,4 +1,4 @@
-package easyreading.app.failurewindows
+package vanity.app.failurewindows
 
 import javafx.application.Application
 import javafx.scene.Group

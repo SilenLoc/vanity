@@ -1,4 +1,4 @@
-package easyreading.app.results
+package vanity.app.results
 
 
 sealed class WellOrUnfit<out Well, out Message> {
