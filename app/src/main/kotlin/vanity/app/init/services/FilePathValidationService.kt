@@ -14,6 +14,6 @@ class DefaultFilePathValidationService(private val filePathService: IFilePathSer
 
     override fun validate(): WellOrUnfit<Unit, String> =
        filePathService.configurationFile.asPath().toFile().checkFile()
-    private fun File.checkFile() = true.wellOr("file: ${this.path} does not exists")
+    private fun File.checkFile() = true.wellOr("file: ${this.path} does not exist")
 }
 
