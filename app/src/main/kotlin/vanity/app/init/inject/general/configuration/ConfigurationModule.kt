@@ -7,7 +7,4 @@ val configurationModule = module {
   single<IFilePathService> { DefaultFilePathService() }
   single<IFilePathValidationService> { DefaultFilePathValidationService(get()) }
   single<IConfigurationService> { ConfigurationService(get()) }
-
-
-
 }

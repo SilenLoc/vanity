@@ -1,4 +1,4 @@
-package vanity.app.platformview.changelog
+package vanity.app.view.platformview.changelog
 
 import javafx.scene.Scene
 import javafx.scene.control.Label
@@ -6,8 +6,8 @@ import javafx.scene.layout.BorderPane
 import javafx.stage.Stage
 import vanity.app.init.inject.getService
 import vanity.app.init.services.IConfigurationService
-import vanity.app.javafx.cssBlackWhite
-import vanity.app.javafx.screenBounds
+import vanity.app.view.javafx.cssBlackWhite
+import vanity.app.view.javafx.screenBounds
 
 
 class Changelog : BorderPane() {

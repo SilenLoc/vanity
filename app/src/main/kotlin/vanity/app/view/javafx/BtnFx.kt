@@ -1,4 +1,4 @@
-package vanity.app.javafx
+package vanity.app.view.javafx
 
 import javafx.scene.control.Button
 import javafx.event.EventHandler

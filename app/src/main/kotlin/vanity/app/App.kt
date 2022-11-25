@@ -3,20 +3,19 @@
  */
 package vanity.app
 
-import vanity.app.failurewindows.showError
-import vanity.app.init.Init
-import vanity.app.init.inject.Koin
-import vanity.app.init.inject.getService
-import vanity.app.init.services.IConfigurationService
-import vanity.app.platformview.PlatformCoreView
 import javafx.application.Application
 import javafx.scene.Scene
-import javafx.stage.Screen
 import javafx.stage.Stage
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.javafx.JavaFx
 import kotlinx.coroutines.withContext
-import vanity.app.javafx.screenBounds
+import vanity.app.init.Init
+import vanity.app.init.inject.Koin
+import vanity.app.init.inject.getService
+import vanity.app.init.services.IConfigurationService
+import vanity.app.view.failurewindows.showError
+import vanity.app.view.javafx.screenBounds
+import vanity.app.view.platformview.PlatformCoreView
 import vanity.utilities.Log
 
 suspend fun main() = withContext(Dispatchers.JavaFx) {

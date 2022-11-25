@@ -1,4 +1,4 @@
-package vanity.app.javafx
+package vanity.app.view.javafx
 
 import javafx.geometry.Rectangle2D
 import javafx.stage.Screen

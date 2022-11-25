@@ -1,9 +1,10 @@
-package vanity.app.platformview.menu
+package vanity.app.view.platformview.menu
 
 import javafx.scene.control.Button
 import javafx.scene.layout.VBox
-import vanity.app.javafx.action
-import vanity.app.javafx.cssBlackWhite
+import vanity.app.view.javafx.action
+import vanity.app.view.javafx.cssBtnGreyAndGreen
+import vanity.app.view.javafx.cssBlackWhite
 
 data class SideOption(val btn: () -> Button, val action: () -> Unit)
 
@@ -18,16 +19,12 @@ class LeftSideMenu(private val options: Collection<SideOption>) : VBox() {
     fun buildUp() {
         this.options.map {
             val btn = it.btn()
+            btn.cssBtnGreyAndGreen()
             btn.action {
                 it.action()
             }
             btn
         }.let { this.children.addAll(it) }
-    }
-
-
-    fun stripDown() {
-        this.children.clear()
     }
 
 }
