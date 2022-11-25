@@ -1,6 +1,6 @@
-package easyreading.app.init.services
+package vanity.app.init.services
 
-import easyreading.app.constants.Const
+import vanity.app.constants.Const
 import kotlin.io.path.Path
 
 

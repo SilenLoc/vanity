@@ -1,4 +1,4 @@
-package easyreading.app.constants
+package vanity.app.constants
 
 
 object Const {

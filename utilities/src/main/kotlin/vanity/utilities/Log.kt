@@ -1,4 +1,4 @@
-package easyreading.utilities
+package vanity.utilities
 
 import mu.KotlinLogging
 

@@ -1,6 +1,6 @@
-package easyreading.app.init.inject
+package vanity.app.init.inject
 
-import easyreading.app.init.inject.general.configuration.configurationModule
+import vanity.app.init.inject.general.configuration.configurationModule
 import org.koin.core.context.GlobalContext
 import org.koin.core.context.startKoin
 import org.koin.core.qualifier.Qualifier
