@@ -11,10 +11,13 @@ import vanity.app.init.services.IConfigurationService
 import vanity.app.platformview.PlatformCoreView
 import javafx.application.Application
 import javafx.scene.Scene
+import javafx.stage.Screen
 import javafx.stage.Stage
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.javafx.JavaFx
 import kotlinx.coroutines.withContext
+import vanity.app.javafx.screenBounds
+import vanity.utilities.Log
 
 suspend fun main() = withContext(Dispatchers.JavaFx) {
     Koin().start()
@@ -29,7 +32,10 @@ private fun startPlatform() {
 
 class PlatformApp : Application() {
     override fun start(stage: Stage) {
-        val scene = Scene(PlatformCoreView(), 400.0, 300.0)
+
+        val scene = Scene(PlatformCoreView(), screenBounds.width, screenBounds.height)
+        val x = getService<IConfigurationService>().cssSheet
+        Log.info { "style sheet$x" }
         scene.stylesheets.add(getService<IConfigurationService>().cssSheet)
         stage.title = "vanity Platform"
         stage.scene = scene
