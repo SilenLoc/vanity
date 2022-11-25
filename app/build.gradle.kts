@@ -25,8 +25,6 @@ dependencies {
   val koinVersion = "3.2.2"
   implementation("io.insert-koin:koin-core:$koinVersion")
 
-  implementation("org.kordamp.bootstrapfx:bootstrapfx-core:0.4.0")
-
 }
 
 application {

@@ -1,7 +1,6 @@
 package vanity.app.init.services
 
 
-import org.kordamp.bootstrapfx.BootstrapFX
 
 interface IConfigurationService {
 
@@ -11,6 +10,6 @@ interface IConfigurationService {
 
 class ConfigurationService(private val filePathService: IFilePathService): IConfigurationService {
 
-    override val cssSheet = BootstrapFX.bootstrapFXStylesheet()
+    override val cssSheet = javaClass.classLoader.getResource("platform.css")?.toExternalForm() ?: ""
 
 }
