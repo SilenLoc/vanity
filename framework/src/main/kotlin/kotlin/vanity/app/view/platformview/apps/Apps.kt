@@ -1,34 +1,37 @@
 package vanity.app.view.platformview.apps
 
-import javafx.scene.Scene
 import javafx.scene.control.Button
-import javafx.scene.layout.BorderPane
-import javafx.scene.layout.HBox
-import javafx.stage.Stage
+import javafx.scene.layout.VBox
 import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import vanity.app.init.inject.getService
-import vanity.app.init.services.IConfigurationService
 import vanity.app.notifications.AppNotification
 import vanity.app.notifications.INotificationService
+import vanity.app.view.javafx.VanityToggleButton
 import vanity.app.view.javafx.action
 import vanity.app.view.javafx.cssBlackWhite
 import vanity.app.view.javafx.cssBtnGreyAndGreen
-import vanity.app.view.javafx.screenBounds
-import vanity.app.view.platformview.apps.applications.elbishtranslator.ElbishTranslator
 
 @OptIn(DelicateCoroutinesApi::class)
-class Apps : BorderPane() {
+class Apps(name: String, private val javaFxApps: Collection<JavaFxApp>) : VBox() {
+
+    private val box = VBox()
 
     init {
+        val mainBtn = VanityToggleButton("$name <", "$name >", { showAppOptions() }, { hideAppOptions() })
+        this.children.add(mainBtn)
+
         cssBlackWhite()
+    }
 
-        val box = HBox()
+    private fun hideAppOptions() {
+        this.box.children.clear()
+        this.children.remove(box)
+    }
 
-        listOf(
-            ElbishTranslator(),
-        ).forEach {
+    private fun showAppOptions() {
+        javaFxApps.forEach {
             val btn = Button(it.name)
             btn.cssBtnGreyAndGreen()
             btn.action {
@@ -36,25 +39,13 @@ class Apps : BorderPane() {
             }
             box.children.add(btn)
         }
-
-        center = box
-        show()
+        this.children.add(box)
     }
 
-    private fun showApp(app: App) {
+    private fun showApp(javaFxApp: JavaFxApp) {
         GlobalScope.launch {
-            getService<INotificationService>().notify(AppNotification(app.name, app))
+            getService<INotificationService>().notify(AppNotification(javaFxApp.name, javaFxApp))
         }
-    }
-
-    fun show() {
-        val scene = Scene(this, screenBounds.width / 4, screenBounds.height / 4)
-        scene.stylesheets.add(getService<IConfigurationService>().cssSheet)
-        val stage = Stage()
-        stage.title = "Apps"
-        stage.scene = scene
-        stage.show()
-
     }
 
 }

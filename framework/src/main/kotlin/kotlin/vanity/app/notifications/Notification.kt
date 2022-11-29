@@ -1,6 +1,6 @@
 package vanity.app.notifications
 
-import vanity.app.view.platformview.apps.App
+import vanity.app.view.platformview.apps.JavaFxApp
 
 
 interface INotification<T> {
@@ -11,4 +11,4 @@ interface INotification<T> {
 
 }
 
-class AppNotification(override val key: String, override val data: App) : INotification<App>
+class AppNotification(override val key: String, override val data: JavaFxApp) : INotification<JavaFxApp>

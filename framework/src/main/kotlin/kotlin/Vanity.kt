@@ -12,6 +12,7 @@ import vanity.app.init.services.IConfigurationService
 import vanity.app.view.failurewindows.showError
 import vanity.app.view.javafx.screenBounds
 import vanity.app.view.platformview.PlatformCoreView
+import vanity.app.view.platformview.apps.JavaFxApp
 import vanity.utilities.Log
 
 object Vanity {
@@ -47,3 +48,13 @@ data class VanityChest(
   val name: String,
   val module: Module
 )
+
+data class JavaFxAppModule(
+  val name: String,
+  val apps: Collection<JavaFxApp>
+)
+interface IAppService{
+
+  val javaFxAppModules: Collection<JavaFxAppModule>
+
+}

@@ -1,57 +1,41 @@
 package vanity.app.view.platformview.menu
 
-import javafx.scene.control.Button
-import javafx.scene.layout.HBox
-import vanity.app.view.javafx.action
-import vanity.app.view.javafx.cssBtnGreyAndGreen
+import IAppService
+import javafx.scene.layout.VBox
+import vanity.app.init.inject.getService
+import vanity.app.view.javafx.VanityToggleButton
 import vanity.app.view.javafx.cssBlackWhite
 import vanity.app.view.platformview.apps.Apps
 import vanity.app.view.platformview.changelog.Changelog
-import vanity.utilities.Log
 
-class MenuRegion : HBox() {
+class MenuRegion : VBox() {
+
+    private val box = VBox()
 
     init {
-        addOpenBtn()
+        val switchBtn = VanityToggleButton(">", "<", { openLeftMenu() }, { closeLeftMenu() })
+        this.children.add(switchBtn)
+        this.children.add(box)
         cssBlackWhite()
     }
 
-    private fun addOpenBtn() {
-        val btn = Button(">")
-        btn.cssBtnGreyAndGreen()
-        btn.action {
-            Log.info { "open menu" }
-            openLeftMenu()
-        }
-        this.children.add(btn)
-    }
-
-    private fun addCloseBtn() {
-        val btn = Button("<")
-        btn.cssBtnGreyAndGreen()
-        btn.action {
-            Log.info { "close menu" }
-            closeLeftMenu()
-        }
-        this.children.add(btn)
-    }
 
     private fun openLeftMenu() {
-        this.children.clear()
+        box.children.clear()
         val menu = LeftSideMenu(
             listOf(
                 sideOption("Changelog") { Changelog() },
-                sideOption("Apps") { Apps() },
-            )
+            ),
+            getService<IAppService>().javaFxAppModules.map {
+                richSideOption(Apps(it.name, it.apps))
+            }
         )
-        this.children.add(menu)
-        addCloseBtn()
+        box.children.add(menu)
         menu.buildUp()
     }
 
     private fun closeLeftMenu() {
-        this.children.clear()
-        addOpenBtn()
+        box.children.clear()
     }
 
 

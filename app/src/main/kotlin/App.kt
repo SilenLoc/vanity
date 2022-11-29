@@ -3,11 +3,27 @@
  */
 package vanity.app
 
+import IAppService
 import Vanity
+import VanityChest
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.javafx.JavaFx
 import kotlinx.coroutines.withContext
+import org.koin.dsl.module
+import vanity.app.apps.services.AppService
 
 suspend fun main() = withContext(Dispatchers.JavaFx) {
-    Vanity.start { emptyList() }
+
+
+    Vanity.start {
+        listOf(
+            VanityChest(
+                "Some cool Apps",
+                module {
+                    single<IAppService> { AppService() }
+                }
+            )
+        )
+
+    }
 }

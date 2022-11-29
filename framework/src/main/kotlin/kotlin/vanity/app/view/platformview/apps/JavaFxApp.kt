@@ -3,7 +3,7 @@ package vanity.app.view.platformview.apps
 
 import javafx.scene.Node
 
-interface App {
+interface JavaFxApp {
     val name: String
     val node: Node
 }

@@ -9,7 +9,7 @@ import vanity.app.init.inject.getService
 import vanity.app.notifications.AppNotification
 import vanity.app.notifications.INotificationService
 import vanity.app.view.javafx.cssBlackWhite
-import vanity.app.view.platformview.apps.App
+import vanity.app.view.platformview.apps.JavaFxApp
 import vanity.app.view.platformview.menu.MenuRegion
 
 @OptIn(DelicateCoroutinesApi::class)
@@ -32,9 +32,9 @@ class PlatformCoreView : BorderPane() {
 
 
 
-    private fun setAndResetCenter(app: App){
+    private fun setAndResetCenter(javaFxApp: JavaFxApp){
         center = null
-        center = app.node
+        center = javaFxApp.node
     }
 
 
