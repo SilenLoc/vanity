@@ -17,6 +17,7 @@ javafx {
 }
 
 dependencies {
+  api(project(":framework"))
   api(project(":utilities"))
 
   implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
