@@ -10,3 +10,4 @@
 
 rootProject.name = "vanity"
 include("app", "list", "utilities")
+include("framework")

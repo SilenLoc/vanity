@@ -1,0 +1,33 @@
+
+.blackWhite{
+  -fx-font-size: 14px;
+  -fx-font-family: sans-serif;
+  -fx-text-fill: rgb(219,219,219);
+  -fx-background-color: #21130d;
+}
+
+.blackWhiteHBox{
+  -fx-font-size: 14px;
+  -fx-spacing: 5px;
+  -fx-font-family: sans-serif;
+  -fx-text-fill: rgb(219,219,219);
+  -fx-background-color: #21130d;
+}
+
+.blackWhiteVBox{
+  -fx-font-size: 14px;
+  -fx-spacing: 5px;
+  -fx-font-family: sans-serif;
+  -fx-text-fill: rgb(219,219,219);
+  -fx-background-color: #21130d;
+}
+
+.btnGreyAndGreen{
+  -fx-font-size: 14px;
+  -fx-font-family: sans-serif;
+  -fx-text-fill: #aeaeaeff;
+  -fx-background-color: rgb(39,54,45) ;
+}
+
+
+
