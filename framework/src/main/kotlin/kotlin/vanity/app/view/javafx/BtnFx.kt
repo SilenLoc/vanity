@@ -13,9 +13,6 @@ fun Button.action(action: () -> Unit) {
 
 class VanityToggleButton(openName: String, closeName: String, action: () -> Unit, returnAction: () -> Unit) : Button(openName) {
 
-    init {
-        this.cssBtnGreyAndGreen()
-    }
 
     sealed interface ToggleState
     class On(val returnAction: () -> Unit, val closeName: String) : ToggleState

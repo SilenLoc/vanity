@@ -20,6 +20,7 @@ class Apps(name: String, private val javaFxApps: Collection<JavaFxApp>) : VBox()
 
     init {
         val mainBtn = VanityToggleButton("$name <", "$name >", { showAppOptions() }, { hideAppOptions() })
+        mainBtn.cssBtnGreyAndGreen()
         this.children.add(mainBtn)
 
         cssBlackWhite()

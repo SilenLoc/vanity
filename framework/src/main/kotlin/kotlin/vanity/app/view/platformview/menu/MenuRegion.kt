@@ -5,6 +5,7 @@ import javafx.scene.layout.VBox
 import vanity.app.init.inject.getService
 import vanity.app.view.javafx.VanityToggleButton
 import vanity.app.view.javafx.cssBlackWhite
+import vanity.app.view.javafx.cssBtnGreyAndGreen
 import vanity.app.view.platformview.apps.Apps
 import vanity.app.view.platformview.changelog.Changelog
 
@@ -14,6 +15,7 @@ class MenuRegion : VBox() {
 
     init {
         val switchBtn = VanityToggleButton(">", "<", { openLeftMenu() }, { closeLeftMenu() })
+        switchBtn.cssBtnGreyAndGreen()
         this.children.add(switchBtn)
         this.children.add(box)
         cssBlackWhite()
