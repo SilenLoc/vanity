@@ -1,7 +1,7 @@
 # vanity
 ___
 
-This repository should be the starting point for a way of incorperating any idea into an application.
+This repository should be a framework to enable any idea into an application.
 ___
 ## ways to contribute
 
