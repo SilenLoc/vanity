@@ -8,6 +8,10 @@
  * This project uses @Incubating APIs which are subject to change.
  */
 
+
+
+
 rootProject.name = "vanity"
-include("app", "list", "utilities")
+include("app")
 include("framework")
+

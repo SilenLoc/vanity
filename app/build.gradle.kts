@@ -5,9 +5,9 @@
  */
 
 plugins {
-  id("kotlin")
   id("org.openjfx.javafxplugin") version "0.0.13"
-  id("vanity.kotlin-application-conventions")
+  application
+  id("org.jetbrains.kotlin.jvm") version "1.7.10"
 }
 
 
@@ -18,7 +18,6 @@ javafx {
 
 dependencies {
   api(project(":framework"))
-  api(project(":utilities"))
 
   implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
   implementation("org.jetbrains.kotlinx:kotlinx-coroutines-javafx:1.6.4")
@@ -26,6 +25,15 @@ dependencies {
   val koinVersion = "3.2.2"
   implementation("io.insert-koin:koin-core:$koinVersion")
 
+  testImplementation("io.kotest:kotest-runner-junit5:5.5.4")
+
+}
+repositories {
+  mavenCentral()
+}
+
+tasks.withType<Test>().configureEach {
+  useJUnitPlatform()
 }
 
 application {

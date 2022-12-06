@@ -13,7 +13,7 @@ import vanity.app.view.failurewindows.showError
 import vanity.app.view.javafx.screenBounds
 import vanity.app.view.platformview.PlatformCoreView
 import vanity.app.view.platformview.apps.JavaFxApp
-import vanity.utilities.Log
+import kotlin.Log
 
 object Vanity {
 
