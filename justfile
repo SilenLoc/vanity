@@ -19,3 +19,7 @@ check:
 run:
     ./gradlew --stop
     ./gradlew -p app run
+
+publish:
+    ./gradlew reckonTagPush
+
