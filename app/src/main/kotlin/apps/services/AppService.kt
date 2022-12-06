@@ -1,7 +1,7 @@
 package vanity.app.apps.services
 
-import IAppService
-import JavaFxAppModule
+import vanity.app.IAppService
+import vanity.app.JavaFxAppModule
 import vanity.app.view.platformview.apps.applications.elbishtranslator.ElbishTranslator
 import vanity.app.view.platformview.apps.applications.elbishtranslator.ExampleApp
 

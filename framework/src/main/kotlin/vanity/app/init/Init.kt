@@ -3,7 +3,7 @@ package vanity.app.init
 import vanity.app.init.services.IFilePathValidationService
 import vanity.app.results.onUnfit
 import vanity.app.results.onWell
-import kotlin.Log
+import vanity.app.Log
 
 class Init(
     private val filePathValidationService: IFilePathValidationService,

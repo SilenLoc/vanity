@@ -7,7 +7,6 @@ alias r := run
 
 bt := '0'
 
-export RUST_BACKTRACE := bt
 
 log := "warn"
 

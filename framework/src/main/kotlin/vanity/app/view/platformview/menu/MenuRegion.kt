@@ -1,6 +1,6 @@
 package vanity.app.view.platformview.menu
 
-import IAppService
+import vanity.app.IAppService
 import javafx.scene.layout.VBox
 import vanity.app.init.inject.getService
 import vanity.app.view.javafx.VanityToggleButton

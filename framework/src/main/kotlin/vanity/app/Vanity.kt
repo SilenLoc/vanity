@@ -1,3 +1,5 @@
+package vanity.app
+
 import javafx.application.Application
 import javafx.scene.Scene
 import javafx.stage.Stage
@@ -13,7 +15,6 @@ import vanity.app.view.failurewindows.showError
 import vanity.app.view.javafx.screenBounds
 import vanity.app.view.platformview.PlatformCoreView
 import vanity.app.view.platformview.apps.JavaFxApp
-import kotlin.Log
 
 object Vanity {
 

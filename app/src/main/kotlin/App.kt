@@ -3,9 +3,6 @@
  */
 package vanity.app
 
-import IAppService
-import Vanity
-import VanityChest
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.javafx.JavaFx
 import kotlinx.coroutines.withContext

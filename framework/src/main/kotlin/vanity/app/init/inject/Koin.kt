@@ -1,6 +1,6 @@
 package vanity.app.init.inject
 
-import VanityChest
+import vanity.app.VanityChest
 import org.koin.core.context.GlobalContext
 import org.koin.core.context.startKoin
 import org.koin.core.qualifier.Qualifier

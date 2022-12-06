@@ -1,5 +1,4 @@
-package kotlin
-
+package vanity.app
 import mu.KotlinLogging
 
 
