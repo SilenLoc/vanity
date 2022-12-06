@@ -15,7 +15,7 @@ plugins {
     `maven-publish`
 
     id("org.openjfx.javafxplugin") version "0.0.13"
-    id("org.jetbrains.kotlin.jvm") version "1.7.10"
+    id("org.jetbrains.kotlin.jvm") version "1.7.22"
 }
 
 
