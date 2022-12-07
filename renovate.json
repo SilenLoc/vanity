@@ -12,5 +12,18 @@
   "lockFileMaintenance": {
     "enabled": true
   },
-  "commitMessagePrefix": "chore(deps): "
+  "commitMessagePrefix": "chore(deps): ",
+  "packageRules": [
+    {
+      "matchPackagePatterns": [
+        ":mockk",
+        ":kluent",
+        ":koin-test",
+        ":kotlinx-coroutines-test",
+        ":junit-",
+        ":kotest-"
+      ],
+      "automerge": true
+    }
+  ]
 }
