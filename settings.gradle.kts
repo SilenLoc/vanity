@@ -21,7 +21,7 @@ plugins {
 }
 
 extensions.configure<org.ajoberstar.reckon.gradle.ReckonExtension>("reckon"){
-    stages("beta", "rc", "final")
+    stages("rc", "final")
     setScopeCalc(calcScopeFromProp())
     setStageCalc(calcStageFromProp())
     setTagParser { tag -> parse(tag.removePrefix("v")) }

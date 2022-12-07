@@ -23,6 +23,11 @@ run:
 publish:
     ./gradlew publish -p framework
 
+
+publish-final:
+    ./gradlew publish -p framework -Preckon.stage=final
+
+
 publish-dry:
     ./gradlew publish -p framework --dry-run
 
