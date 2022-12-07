@@ -33,22 +33,15 @@ dependencies {
     implementation("io.github.microutils:kotlin-logging-jvm:3.0.4")
     implementation("ch.qos.logback:logback-classic:1.4.5")
 
-    val koinVersion = "3.2.2"
-    implementation("io.insert-koin:koin-core:$koinVersion")
+    implementation("io.insert-koin:koin-core:3.2.2")
 
     implementation(platform("org.jetbrains.kotlin:kotlin-bom"))
-
-    // Use the Kotlin JDK 8 standard library.
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-
-    // Align versions of all Kotlin components
     implementation(platform("org.jetbrains.kotlin:kotlin-bom"))
 
     testImplementation("io.kotest:kotest-runner-junit5:5.5.4")
     testImplementation("io.kotest:kotest-assertions-core:5.5.4")
-}
-repositories {
-    mavenCentral()
+
 }
 
 tasks.withType<Test>().configureEach {
@@ -59,10 +52,6 @@ java {
     withJavadocJar()
     withSourcesJar()
 }
-
-
-
-allprojects {
 
     apply<MavenPublishPlugin>()
 
@@ -83,4 +72,4 @@ allprojects {
             }
         }
     }
-}
+

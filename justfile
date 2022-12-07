@@ -21,5 +21,11 @@ run:
     ./gradlew -p app run
 
 publish:
-    ./gradlew reckonTagPush
+    ./gradlew publish -p framework
 
+publish-dry:
+    ./gradlew publish -p framework --dry-run
+
+release *args:
+	npm install --no-save @semantic-release/exec conventional-changelog-conventionalcommits
+	npx semantic-release {{args}}
