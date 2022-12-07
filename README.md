@@ -19,11 +19,8 @@ Some rules:
 - UI code needs to be as simple as possible, no logic, no direct interface use.
 - DRY is not the first rule of programming..., consider duplicating over coupling.
 ___
-# Projects
+The implementations are in: https://github.com/SilenLoc/vanity-platform
 
-## bionic reading
-
-## elvish / elbish translator
 
 
 
