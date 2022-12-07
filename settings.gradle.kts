@@ -13,7 +13,6 @@ import org.ajoberstar.reckon.core.Version.parse
 
 
 rootProject.name = "vanity"
-include("app")
 include("framework")
 
 plugins {
