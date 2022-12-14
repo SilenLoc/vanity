@@ -33,7 +33,7 @@ dependencies {
     implementation("io.github.microutils:kotlin-logging-jvm:3.0.4")
     implementation("ch.qos.logback:logback-classic:1.4.5")
 
-    implementation("io.insert-koin:koin-core:3.2.2")
+    implementation("io.insert-koin:koin-core:3.3.0")
 
     implementation(platform("org.jetbrains.kotlin:kotlin-bom"))
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
